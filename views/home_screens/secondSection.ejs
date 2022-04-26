@@ -1,0 +1,15 @@
+<section  style="padding-top:30px;">
+  <div  class="container">
+    <p class="orange_plus" style="font-size: 16px;">BEST CHOICE </p>
+    <p class="tx1" style="
+   font-weight:700;
+   font-size:40px;">Popular Properties<span class="orange_plus">.</span></p>
+    <div class="" style="padding-bottom:20px;">
+     <div class="row">
+        <% list.filter((a,i)=>i < 8).forEach(function(p){ %>
+            <%- include('../components/thumbnail', p); %>
+          <% }); %>
+     </div>
+   </div>
+  </div>
+   </section>

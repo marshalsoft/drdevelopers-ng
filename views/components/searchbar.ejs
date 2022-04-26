@@ -1,0 +1,144 @@
+<form class="searchbarwrp" action="/search" method="post">
+        <div class="row">
+                <div class="col-lg-3 c1">
+                        <div class="row">
+                                <div class="col nav-item citem">Buy</div>
+                                <div style="width:10px;margin-top: 19px;">
+                                        <svg width="1" height="24" viewBox="0 0 1 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="0.5" y1="-2.18557e-08" x2="0.500001" y2="24"
+                                                        stroke="#F5F5F5" />
+                                        </svg>
+                                </div>
+
+                                <div class="col nav-item citem">Sale</div>
+                                <div style="width:10px;margin-top: 19px;">
+                                        <svg width="1" height="24" viewBox="0 0 1 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="0.5" y1="-2.18557e-08" x2="0.500001" y2="24"
+                                                        stroke="#F5F5F5" />
+                                        </svg>
+                                </div>
+                                <div class="col nav-item citem">Rent</div>
+                        </div>
+                </div>
+                <div class="col-lg-9"></div>
+        </div>
+        <div class="searchwrpInner row">
+                <div class="col" style="">
+                        <b class="tx1">Locations</b>
+                        <div class="tx2 ">
+                                <select required name="location" class="searchform">
+                                        <option>Select your city/state</option>
+                                        <% siteInfo.stateList.forEach(state => { %>
+                                        <option><%= state %></option>
+                                        <%  }); %>
+                                </select>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 9C7.50555 9 7.0222 8.85338 6.61108 8.57868C6.19995 8.30397 5.87952 7.91352 5.6903 7.45671C5.50108 6.99989 5.45157 6.49723 5.54804 6.01228C5.6445 5.52732 5.8826 5.08187 6.23223 4.73223C6.58187 4.3826 7.02732 4.1445 7.51228 4.04804C7.99723 3.95157 8.4999 4.00108 8.95671 4.1903C9.41353 4.37952 9.80397 4.69995 10.0787 5.11108C10.3534 5.5222 10.5 6.00555 10.5 6.5C10.4992 7.1628 10.2356 7.79822 9.76689 8.26689C9.29822 8.73556 8.6628 8.99921 8 9ZM8 5C7.70333 5 7.41332 5.08797 7.16665 5.2528C6.91997 5.41762 6.72771 5.65189 6.61418 5.92598C6.50065 6.20007 6.47095 6.50167 6.52882 6.79264C6.5867 7.08361 6.72956 7.35088 6.93934 7.56066C7.14912 7.77044 7.41639 7.9133 7.70737 7.97118C7.99834 8.02906 8.29994 7.99935 8.57403 7.88582C8.84812 7.77229 9.08238 7.58003 9.24721 7.33336C9.41203 7.08668 9.5 6.79667 9.5 6.5C9.4996 6.1023 9.34144 5.721 9.06022 5.43978C8.779 5.15856 8.3977 5.0004 8 5Z"
+                                                fill="#F6891F" />
+                                        <path d="M8.00001 15L3.78201 10.0255C3.7234 9.95081 3.66539 9.87564 3.60801 9.8C2.8875 8.85089 2.49826 7.69161 2.50001 6.5C2.50001 5.04131 3.07947 3.64236 4.11092 2.61091C5.14237 1.57946 6.54132 1 8.00001 1C9.4587 1 10.8576 1.57946 11.8891 2.61091C12.9205 3.64236 13.5 5.04131 13.5 6.5C13.5018 7.69107 13.1127 8.84982 12.3925 9.7985L12.392 9.8C12.392 9.8 12.242 9.997 12.2195 10.0235L8.00001 15ZM4.40601 9.1975C4.40701 9.1975 4.52301 9.3515 4.54951 9.3845L8.00001 13.454L11.455 9.379C11.477 9.3515 11.594 9.1965 11.5945 9.196C12.1831 8.42056 12.5012 7.47352 12.5 6.5C12.5 5.30653 12.0259 4.16193 11.182 3.31802C10.3381 2.47411 9.19348 2 8.00001 2C6.80653 2 5.66194 2.47411 4.81803 3.31802C3.97411 4.16193 3.50001 5.30653 3.50001 6.5C3.49896 7.47412 3.81739 8.42171 4.40651 9.1975H4.40601Z"
+                                                fill="#F6891F" />
+                                </svg>
+                        </div>
+                </div>
+                <div class="col">
+                        <b class="tx1">Property Type</b>
+                        <div class="tx2">
+                                <select required name="propertyType" class="searchform">
+                                        <option>Choose Property Type </option>
+                                        <option value="1">Flat / Apartment</option>
+                                        <option value="2">House</option>
+                                        <option value="5">Land</option>
+                                        <option value="3">Commercial Property</option>
+                                </select>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_274_8536)">
+                                                <path d="M0.625 3.375L5.9375 9L11.25 3.375" stroke="#F6891F"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                                <clipPath id="clip0_274_8536">
+                                                        <rect width="12" height="12" fill="white"
+                                                                transform="translate(12 12) rotate(180)" />
+                                                </clipPath>
+                                        </defs>
+                                </svg>
+                        </div>
+                </div>
+                <div class="col">
+                        <b class="tx1">Price Range</b>
+                        <div class="tx2 ">
+                                <select required name="priceRange" class="searchform">
+                                        <option>Choose a range</option>
+                                        ><option value="100000 - 200000">₦ 100,000 - ₦ 200,000</option>
+                                        <option value="200000 - 250000">₦ 200,000  - ₦ 250,000</option>
+                                        <option value="250000 - 300000">₦ 250,000 - ₦ 300,000</option>
+                                        <option value="300000 - 400000">₦ 300,000 - ₦ 400,000</option>
+                                        <option value="400000 - 500000">₦ 400,000 - ₦ 500,000</option>
+                                        <option value="500000 - 600000">₦ 500,000 - ₦ 600,000</option>
+                                        <option value="600000 - 700000">₦ 600,000 - ₦ 700,000</option>
+                                        <option value="700000 - 750000">₦ 700,000 - ₦ 750,000</option>
+                                        <option value="750000 - 800000">₦ 750,000 - ₦ 800,000</option>
+                                        <option value="800000 - 900000">₦ 800,000 - ₦ 900,000</option>
+                                        <option value="900000 - 1000000">₦ 900,000 - ₦ 1 Million</option>
+                                        <option value="1000000 - 2000000">₦ 1 Million  - ₦ 2 Million</option>
+                                        <option value="2000000 - 3000000">₦ 2 Million - ₦ 3 Million</option>
+                                        <option value="3000000 - 5000000">₦ 3 Million  - ₦ 4 Million</option>
+                                        <option value="5000000 - 10000000">₦ 5 Million - ₦ 10 Million</option>
+                                        <option value="10000000 - 20000000">₦ 10 Million - ₦ 20 Million</option>
+                                        <option value="20000000 - 30000000">₦ 20 Million - ₦ 30 Million</option>
+                                        <option value="30000000 - 40000000">₦ 30 Million - ₦ 40 Million</option>
+                                        <option value="40000000 - 60000000">₦ 40 Million - ₦ 60 Million</option>
+                                        <option value="60000000 - 80000000">₦ 60 Million - ₦ 80 Million</option>
+                                        <option value="80000000 - 100000000">₦ 80 Million - ₦ 100 Million</option>
+                                        <option value="100000000 - 150000000">₦ 100 Million - ₦ 150 Million</option>
+                                        <option value="150000000 - 200000000">₦ 150 Million - ₦ 200 Million</option>
+                                        <option value="200000000 - 250000000">₦ 200 Million - ₦ 250 Million</option>
+                                        <option value="250000000 - 300000000">₦ 250 Million - ₦ 300 Million</option>
+                                        <option value="300000000 - 400000000">₦ 300 Million - ₦ 400 Million</option>
+                                        <option value="400000000 - 500000000">₦ 400 Million - ₦ 500 Million</option>
+                                        <option value="500000000 - 600000000">₦ 500 Million - ₦ 600 Million</option>
+                                        <option value="600000000 - 700000000">₦ 600 Million - ₦ 700 Million</option>
+                                        <option value="700000000 - 800000000">₦ 700 Million - ₦ 800 Million</option>
+                                        <option value="800000000 - 900000000">₦ 800 Million - ₦ 900 Million</option>
+                                        <option value="900000000 - 1000000000">₦ 900 Million - ₦ 1 Billion</option>
+                                        <option value="1000000000 - 2000000000">₦ 1 Billion - ₦ 2 Billion</option>
+                                        <option value="2000000000 - 5000000000">₦ 2 Billion - ₦ 5 Billion </option>
+                                        <option value="5000000000 - 10000000000">₦ 5 Billion - ₦ 10 Billion</option>
+                                        <option value="10000000000 - 20000000000">₦ 10 Billion - ₦ 20 Billion</option>
+                                        <option value="20000000000 - 30000000000">₦ 20 Billion - ₦ 30 Billion</option>
+                                        <option value="30000000000 - 200000">₦ 30 Billion - ₦ 40 Billion</option>
+                                        <option value="40000000000 - 40000000000">₦ 40 Billion - ₦ 40 Billion</option>
+                                        <option value="50000000000 - 60000000000">₦ 50 Billion - ₦ 60 Million</option>
+                                </select>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_274_8536)">
+                                                <path d="M0.625 3.375L5.9375 9L11.25 3.375" stroke="#F6891F"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                                <clipPath id="clip0_274_8536">
+                                                        <rect width="12" height="12" fill="white"
+                                                                transform="translate(12 12) rotate(180)" />
+                                                </clipPath>
+                                        </defs>
+                                </svg>
+                        </div>
+                </div>
+                <div class="col">
+                        <button class="btn button_orange" style="height:48px;float:right;"><svg width="21" height="21"
+                                        viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 20L15.514 15.506L20 20ZM18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
+                                                stroke="white" stroke-width="1.91667" stroke-linecap="round" />
+                                </svg>
+                                Search</button>
+                </div>
+        </div>
+        </div>
+</form>

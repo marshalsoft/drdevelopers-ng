@@ -1,0 +1,14 @@
+<section class="center" style="min-height:120px;padding:30px;">
+    <div class="orange_plus" style="text-align:center;font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;">OUR TEAM MEMBERS</div>
+    <p>Et sed ultricies lzn viverra bibendum rhoncus. Morbi aliquam eu morbi in fermentum, viverra. Augue nullam at faucibus duis s.</p>
+     <div class="row" style="justify-content: center;
+     align-items: center;
+     display: inline-flex;">
+        <% teamList.forEach(function(item){ %>
+            <%- include('../components/teamitem', item); %>
+          <% }); %>
+     </div>
+    </section>

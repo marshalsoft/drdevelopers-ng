@@ -1,0 +1,16 @@
+<section class="" style="min-height:120px;padding:30px;background:white;">
+<div class="container" >
+<div class="tx1" style="text-align:center;font-style: normal;
+font-weight: 700;
+font-size: 24px;">Loved by businesses, and individuals across the globe<span class="orange_plus">.</span></div>
+ <div class="center" >
+    <div class="row" style="justify-content: center;
+    align-items: center;
+    display: inline-flex;" >
+    <% agentList.forEach(function(item){ %>
+        <%- include('../components/globalThumb', item); %>
+      <% }); %>
+ </div>
+</div>
+</div>
+</section>

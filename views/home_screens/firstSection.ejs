@@ -1,0 +1,42 @@
+<section class="" style="min-height:750px;">
+    <div class="row p-20">
+    <div class="col-lg-6" style="min-height:650px;padding:30px;">
+        <div class="h1-title" style="margin-left:89px;margin-top: 120px;">Egestas ac quis ac sagittis nibh aliquam commodo. </div>
+        <div class="h1-title-sub" style="margin-left:89px;" >
+            Et sed ultricies lzn viverra bibendum rhoncus. Morbi aliquam eu morbi in fermentum, viverra. Augue nullam at faucibus duis sit nisl convallis. Feugiat orci consectetur velit porttitor pulvinar in.
+        </div>
+    </div>
+    <div class="col-lg-6" style="min-height:650px;position:relative;" >
+       <img src="./images/fbck_img.svg" style="height:100%;width:100%;position:absolute;" /> 
+       <img src="./images/overlay.svg" style="height:100%;width:100%;position:absolute;" /> 
+       <div class="col-lg-6" style="padding:30px;" >
+             
+         </div>
+    </div>
+    </div>
+    <%- include('../components/searchbar',siteInfo); %>  
+    <div class="row" style="position:absolute;bottom:10px;left:7%;right:7%;">
+        <div class="col-lg-6 ">
+             <div class="row">
+              <div class="col">
+                   <b class="tx1"><span id="premiumCount"></span><span class="orange_plus">+</span></b>
+                  <div class="tx2">Premium <br/>Products</div>
+               </div>
+             <div class="col">
+                   <b class="tx1"><span id="locationCount"></span><span class="orange_plus">+</span></b>
+                   <div class="tx2">Available<br/>Locations</div>
+              </div>
+              <div class="col">
+                   <b class="tx1"><span id="customerCount"></span><span class="orange_plus">+</span></b>
+                   <div class="tx2">Happy<br/>Customers</div>
+              </div>
+              </div>
+          </div>
+         <div class="col-lg-6"></div>
+          </div>
+</section>
+<script >
+    IncrementedCounter("premiumCount",50);
+    IncrementedCounter("locationCount",120);
+    IncrementedCounter("customerCount",500)
+  </script>

@@ -1,0 +1,28 @@
+
+<div class="col-lg-3 col-md-6 col-sm-12" style="padding-top:40px;">
+    <a href="/property_details?id=<%=  %> " style="text-decoration:none;">
+    <div class="card nocard" >
+     <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80" class="card-img-top" alt="...">
+     <% if(typeof propertyCount !== 'undefined'){ %> 
+        <div class="card" style="position: absolute;bottom: 10px; width: 80%;
+        margin-left: 10%;
+        height:72px;padding:10px;">
+            <div style="position:relative;">
+            <div >
+            <b><%= name %></b>
+            <p><%= propertyCount %> properties</p>
+            </div> 
+            <div class="" style="width: 30px;position: absolute;right: 0px;top: 0px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5H7" stroke="#F6891F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#F6891F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 16.5H8" stroke="#F6891F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12.5H5" stroke="#F6891F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+        </div>   
+    </div>   
+        </div>
+        <% } %> 
+    </div>
+    </a>
+       </div>

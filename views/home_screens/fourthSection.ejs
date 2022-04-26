@@ -1,0 +1,18 @@
+<section  style="padding-top:30px;">
+  <div class="container"  >
+   <p class="orange_plus" style="
+   font-size: 16px;">OUR LOCATIONS</p>
+    <p class="tx1" style="
+   font-weight:700;
+   font-size:40px;">Available in these states<span class="orange_plus" style="font-size:40px;">.</span></p>
+    <div class="" style="padding-bottom:30px;">
+     <div class="row" style="justify-content: center;
+     align-items: center;
+     display: inline-flex;">
+        <% stateList.filter((a,i)=>i < 8).forEach(function(p){ %>
+            <%- include('../components/places', p); %>
+          <% }); %>
+     </div>
+   </div>
+  </div>
+   </section>
