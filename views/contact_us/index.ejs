@@ -5,24 +5,104 @@
       <div class="container" >
       <div class="row" style="margin-top: 120px;position: relative;">
         <div class="col" >
-          <div class="h1-title" style="margin-top: 30px;"><span class="orange_plus" style="font-size: 40px;">CONTACT US</span></div>
-          <div style="font-size: 20px;margin-bottom: 10px;margin-top: 10px;">
-            IKEJA GRA
-            <span class="orange_plus" >5000sqm</span>
+          <div class="h1-title" style="margin-top: 30px;"><span class="orange_plus" style="font-size:12px;">CONTACT US</span></div>
+          <div style="font-size: 48px;margin-bottom: 10px;margin-top: 10px;">
+            Reach out to us using the information provided<span class="orange_plus" style="font-size:48px;">.</span>
           </div>
             <div class="h1-title-sub" style="margin-bottom: 50px;height: 40%;" >
-              Et sed ultricies lzn viverra bibendum rhoncus. Morbi aliquam eu morbi in fermentum, viverra. Augue nullam at faucibus duis sit nisl convallis. Feugiat orci consectetur velit porttitor pulvinar in.
+              Et sed ultricies lzn viverra bibendum rhoncus. Morbi aliquam eu morbi in fermentum, viverra. Augue nullam at faucibus duis sit nisl convallis. Feugiat orci consectetur velit porttitor pulvinar in. </div>
+        </div>
+        <div class="col" ></div>
+        </div>
+      <div class="row">
+        <div class="col-lg-6" style="min-height: 400px;background: #fff;">
+        <div class="row">
+        <div class="col-lg-7 p-5">
+              <div class="orange_plus" style="font-size: 20px;">Address</div>
+              <div  class="" style="font-size:16px;padding-top: 20px;font-weight: lighter;">
+                5, Peace Valley Estate, Admiralty way, Lekki Phase 1, Lagos, Nigeria.
+              </div>
+              <div class="orange_plus" style="font-size: 20px;margin-top: 30px;">Email</div>
+              <div class="" style="font-size:16px;padding-top: 20px;padding-bottom: 20px;font-weight: lighter;">
+                <% siteInfo.customer_service.forEach(element => { %>
+                  <a href="mailto:<%= element.email %>"><%= element.email %> </a>
+                  <%  }); %> 
+              </div>
+        </div>
+        <div class="col-lg-5 p-5">
+          <div class="orange_plus" style="font-size: 20px;">Phone numbers</div>
+          <div class="" style="font-size:16px;padding-top: 20px;font-weight: lighter;">
+           <% siteInfo.customer_service.forEach(element => { %>
+            <a href="tel:<%= element.mobile %>"><%= element.mobile %> </a>
+            <%  }); %> 
           </div>
-          <div >
-            <button class="btn button_orange" style="width:60%;">
-              Schedule Inspection
-            </button>
-            <button class="btn button_border_line" style="width: 60%;margin-top: 20px;">
-              Download Brochure
-            </button>
+          <div class="orange_plus" style="font-size: 20px;margin-top: 30px;">Social media</div>
+          <div class="row" style="font-size:16px;padding-top: 20px;padding-bottom: 20px;font-weight: lighter;">
+              <div class="col">
+                <a href="<%= siteInfo.facebook %>">
+                  <span style="width:60px;height:60px;">
+                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.4288 2.9043C9.4072 2.9043 2.90479 9.40671 2.90479 17.4283C2.90479 24.6773 8.21622 30.6859 15.1602 31.7766V21.6258H11.4711V17.4283H15.1602V14.2287C15.1602 10.589 17.3272 8.57884 20.6459 8.57884C22.2348 8.57884 23.8964 8.86206 23.8964 8.86206V12.435H22.0663C20.261 12.435 19.6989 13.5548 19.6989 14.7036V17.4283H23.7264L23.083 21.6258H19.6989V31.7766C26.6414 30.6873 31.9529 24.6758 31.9529 17.4283C31.9529 9.40671 25.4504 2.9043 17.4288 2.9043Z" fill="#201E5A"/>
+                      </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a href="<%= siteInfo.linkedin %>">
+                  <span style="width:60px;height:60px;">
+                    <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.9422 16.7577C32.9422 25.8386 25.5808 33.2 16.4999 33.2C7.41909 33.2 0.0576172 25.8386 0.0576172 16.7577C0.0576172 7.6769 7.41909 0.31543 16.4999 0.31543C25.5808 0.31543 32.9422 7.6769 32.9422 16.7577ZM24.3145 12.7502C25.1094 12.6558 25.8673 12.4445 26.5719 12.1321C26.0452 12.9202 25.379 13.6122 24.6105 14.1662C24.6181 14.3344 24.6219 14.5041 24.6219 14.6744C24.6219 19.8684 20.6686 25.857 13.4396 25.857C11.2203 25.857 9.1539 25.2067 7.41553 24.0911C7.7224 24.1278 8.03602 24.1462 8.35257 24.1462C10.1944 24.1462 11.8888 23.5181 13.2341 22.4638C11.5139 22.4319 10.0628 21.2955 9.56278 19.7345C9.80253 19.7802 10.0484 19.8045 10.3023 19.8045C10.6601 19.8045 11.008 19.7568 11.3375 19.6665C9.53991 19.3057 8.18462 17.7174 8.18462 15.8131C8.18462 15.7967 8.18462 15.78 8.18491 15.7633C8.71455 16.0584 9.32097 16.2352 9.96491 16.2554C8.91092 15.5508 8.21657 14.3473 8.21657 12.9841C8.21657 12.264 8.4106 11.5884 8.74884 11.008C10.6874 13.3865 13.5835 14.9511 16.8498 15.1149C16.7824 14.8271 16.7475 14.5273 16.7475 14.2192C16.7475 12.0491 18.5076 10.2891 20.6777 10.2891C21.8088 10.2891 22.8302 10.7662 23.5471 11.5298C24.442 11.3536 25.2835 11.0268 26.0429 10.5763C25.7489 11.4946 25.1261 12.264 24.3145 12.7502Z" fill="#201E5A"/>
+                      </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a href="<%= siteInfo.twitter %>">
+                  <span style="width:60px;height:60px;">
+                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.5714 2.9043C21.5176 2.9043 22.0099 2.91882 23.5582 2.99144C25.105 3.06406 26.158 3.30661 27.0846 3.66681C28.0432 4.03572 28.8508 4.53535 29.6583 5.34143C30.3968 6.06748 30.9683 6.94574 31.3329 7.91509C31.6917 8.84027 31.9357 9.89471 32.0083 11.4415C32.0766 12.9898 32.0954 13.4822 32.0954 17.4283C32.0954 21.3745 32.0809 21.8669 32.0083 23.4151C31.9357 24.9619 31.6917 26.0149 31.3329 26.9416C30.9694 27.9115 30.3978 28.7899 29.6583 29.5152C28.932 30.2535 28.0538 30.8249 27.0846 31.1899C26.1595 31.5486 25.105 31.7926 23.5582 31.8652C22.0099 31.9335 21.5176 31.9524 17.5714 31.9524C13.6252 31.9524 13.1329 31.9378 11.5846 31.8652C10.0378 31.7926 8.98479 31.5486 8.05816 31.1899C7.08842 30.826 6.21001 30.2544 5.4845 29.5152C4.74581 28.7893 4.17433 27.911 3.80988 26.9416C3.44968 26.0164 3.20713 24.9619 3.13451 23.4151C3.06624 21.8669 3.04736 21.3745 3.04736 17.4283C3.04736 13.4822 3.06189 12.9898 3.13451 11.4415C3.20713 9.89326 3.44968 8.84172 3.80988 7.91509C4.17332 6.94514 4.74494 6.06665 5.4845 5.34143C6.21022 4.60249 7.08857 4.03097 8.05816 3.66681C8.98479 3.30661 10.0363 3.06406 11.5846 2.99144C13.1329 2.92318 13.6252 2.9043 17.5714 2.9043ZM17.5714 10.1663C15.6454 10.1663 13.7983 10.9314 12.4364 12.2933C11.0745 13.6552 10.3094 15.5023 10.3094 17.4283C10.3094 19.3543 11.0745 21.2015 12.4364 22.5634C13.7983 23.9252 15.6454 24.6903 17.5714 24.6903C19.4974 24.6903 21.3445 23.9252 22.7064 22.5634C24.0683 21.2015 24.8334 19.3543 24.8334 17.4283C24.8334 15.5023 24.0683 13.6552 22.7064 12.2933C21.3445 10.9314 19.4974 10.1663 17.5714 10.1663ZM27.012 9.80321C27.012 9.32171 26.8207 8.85993 26.4803 8.51946C26.1398 8.17898 25.678 7.98771 25.1965 7.98771C24.715 7.98771 24.2532 8.17898 23.9128 8.51946C23.5723 8.85993 23.381 9.32171 23.381 9.80321C23.381 10.2847 23.5723 10.7465 23.9128 11.087C24.2532 11.4274 24.715 11.6187 25.1965 11.6187C25.678 11.6187 26.1398 11.4274 26.4803 11.087C26.8207 10.7465 27.012 10.2847 27.012 9.80321ZM17.5714 13.0711C18.727 13.0711 19.8353 13.5302 20.6524 14.3473C21.4695 15.1645 21.9286 16.2727 21.9286 17.4283C21.9286 18.5839 21.4695 19.6922 20.6524 20.5093C19.8353 21.3265 18.727 21.7855 17.5714 21.7855C16.4158 21.7855 15.3075 21.3265 14.4904 20.5093C13.6733 19.6922 13.2142 18.5839 13.2142 17.4283C13.2142 16.2727 13.6733 15.1645 14.4904 14.3473C15.3075 13.5302 16.4158 13.0711 17.5714 13.0711Z" fill="#201E5A"/>
+                      </svg>
+                  </span>
+                </a>
+              </div>
           </div>
         </div>
+        </div>
+        </div>   
+       <div class="col-lg-6 p-5">
+        <% if(siteInfo.error != ""){ %> 
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <%= siteInfo.error %> 
+            <button type="button" class="btn close" data-dismiss="alert" aria-label="Close" style="position:absolute;top:-5px;right:3px;">
+              <span aria-hidden="true" style="font-size: 33px;;">&times;</span>
+            </button>
+          </div>
+        <% } %> 
+        <div class="row">
+          <div class="col-lg-10">
+        <form action="/contact_us" method="post">
+          <div class="mb-3">
+            <label for="cntName" class="form-label">Name</label>
+            <input type="text" value="<%= siteInfo.contactUsername %>" placeholder="<%= siteInfo.firstname+" "+siteInfo.lastname %>" required class="form-control" id="contactUsername" name="contactUsername" aria-describedby="cntName">
+          </div>
+          <div class="mb-3" >
+            <label class="form-label">Email</label>
+            <input type="email" value="<%= siteInfo.contactUseremail %>" placeholder="<%= siteInfo.email %>" required class="form-control" id="contactUseremail" name="contactUseremail">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" >Message</label>
+            <textarea class="form-control" id="contactUsMessage" required ></textarea>
+          </div>
+          <button type="submit" class="btn button_orange" style="float:right;width: 190px;">Send Message</button>
+        </form>
       </div>
-    </div>
+      <div class="col-lg-2"></div>
+        </div>
+      </div>
+      </div>
+      <div class="row" style="height:500px;width:100%;padding-top: 30px;background: white;">
+  <iframe width="100%" height="100%"  src="<%= siteInfo.map_embeded %>" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+   </div>
+   <%- include('./../components/footer',siteInfo); %> 
     </section>
   </body>
